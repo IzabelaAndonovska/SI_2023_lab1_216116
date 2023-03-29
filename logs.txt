@@ -1,0 +1,154 @@
+
+C:\Users\User>mkdir SI_2023_lab1_216116
+
+C:\Users\User>cd SI_2023_lab1_216116
+
+C:\Users\User\SI_2023_lab1_216116>git init
+Initialized empty Git repository in C:/Users/User/SI_2023_lab1_216116/.git/
+
+C:\Users\User\SI_2023_lab1_216116>git remote add origin https://github.com/IzabelaAndonovska/SI_2023_lab1_216116.git
+
+C:\Users\User\SI_2023_lab1_216116>git add README.md.txt
+
+C:\Users\User\SI_2023_lab1_216116>git commit -m "Initial commit"
+[master (root-commit) 733848c] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md.txt
+
+C:\Users\User\SI_2023_lab1_216116>git add SILab1.java
+warning: in the working copy of 'SILab1.java/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\User\SI_2023_lab1_216116>git commit -m "Add java class"
+[master 84b10fe] Add java class
+ 6 files changed, 120 insertions(+)
+ create mode 100644 SILab1.java/.idea/.gitignore
+ create mode 100644 SILab1.java/.idea/misc.xml
+ create mode 100644 SILab1.java/.idea/modules.xml
+ create mode 100644 SILab1.java/.idea/vcs.xml
+ create mode 100644 SILab1.java/SIlab1.java.iml
+ create mode 100644 SILab1.java/src/Main.java
+
+C:\Users\User\SI_2023_lab1_216116>git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (14/14), 2.04 KiB | 695.00 KiB/s, done.
+Total 14 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/IzabelaAndonovska/SI_2023_lab1_216116.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'
+
+C:\Users\User\SI_2023_lab1_216116>git branch bug1
+
+C:\Users\User\SI_2023_lab1_216116>git branch bug2
+
+C:\Users\User\SI_2023_lab1_216116>git branch bug3
+
+C:\Users\User\SI_2023_lab1_216116>git checkout bug1
+Switched to branch 'bug1'
+
+
+C:\Users\User\SI_2023_lab1_216116>git status
+On branch bug1
+nothing to commit, working tree clean
+
+C:\Users\User\SI_2023_lab1_216116>git commit -a -m " Fix wrong loop for reading"
+warning: in the working copy of 'SILab1.java/src/Main.java', LF will be replaced by CRLF the next time Git touches it
+[bug1 f00429c]  Fix wrong loop for reading
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+C:\Users\User\SI_2023_lab1_216116>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\User\SI_2023_lab1_216116>git commit -a -m "Fix wrong condition in filterOddNumbers."
+[bug2 453a307] Fix wrong condition in filterOddNumbers.
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\SI_2023_lab1_216116>git checkout bug3
+Switched to branch 'bug3'
+
+C:\Users\User\SI_2023_lab1_216116>git commit -a -m "Fix method sumEvenNumbers"
+[bug3 93a064a] Fix method sumEvenNumbers
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+C:\Users\User\SI_2023_lab1_216116>git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>git merge bug1
+Updating 84b10fe..f00429c
+Fast-forward
+ SILab1.java/src/Main.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+C:\Users\User\SI_2023_lab1_216116>git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 443 bytes | 443.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/IzabelaAndonovska/SI_2023_lab1_216116.git
+   84b10fe..f00429c  master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>git branch
+  bug1
+  bug2
+  bug3
+* master
+
+C:\Users\User\SI_2023_lab1_216116>git merge bug2
+Auto-merging SILab1.java/src/Main.java
+Merge made by the 'ort' strategy.
+ SILab1.java/src/Main.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\User\SI_2023_lab1_216116>git push -u origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 899 bytes | 449.00 KiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/IzabelaAndonovska/SI_2023_lab1_216116.git
+   f00429c..18958bf  master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>git checkout bug3
+Switched to branch 'bug3'
+
+C:\Users\User\SI_2023_lab1_216116>git rebase master
+Successfully rebased and updated refs/heads/bug3.
+
+C:\Users\User\SI_2023_lab1_216116>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>git merge bug3
+Updating 18958bf..54d2841
+Fast-forward
+ SILab1.java/src/Main.java | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+C:\Users\User\SI_2023_lab1_216116>git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 462 bytes | 462.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/IzabelaAndonovska/SI_2023_lab1_216116.git
+   18958bf..54d2841  master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\User\SI_2023_lab1_216116>
